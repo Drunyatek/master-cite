@@ -1,0 +1,18 @@
+ru
+Хвищук Андрей Юрьевич
+Исследование методов создания алгоритмов синтеза программ на основе языков описания аппаратуры в САПР вычислительной техники
+Системы автоматизированного проектирования
+
+ua
+Хвищук Андрій Юрійович
+Дослідження методів створення алгоритмів синтезу програм на основі мов опису апаратури в САПР обчислювальної техніки
+Системи автоматизованого проектування
+
+en
+Andrew Khvishuk
+Research of methods for creating algorithms for the synthesis of programs based on the hardware description languages in CAD systems for computing equipment
+Computer-aided design systems
+
+fr
+
+ge
