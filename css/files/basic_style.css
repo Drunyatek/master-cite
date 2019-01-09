@@ -1,7 +1,8 @@
 /* ------------- ОСНОВНЫЕ ТЕГИ ------------------------------------------------------------------------------ */
 
 body {  /* Тело документа */
-	background-image: url('../images/bg1.png');
+	/* background-image: url('../images/bg1.png'); */
+	background-color: #E7F4F0;
   margin-bottom: 20pt;  	
 }
 
@@ -15,7 +16,7 @@ h1 { /* Заголовок страницы */
   line-height: 100%;
   text-align: center;
   padding: 0pt 0pt 0pt 0pt; 
-  color: #0000a3;
+  color: #2E20BE;
   margin-top: 0pt;
 }
 
@@ -24,15 +25,15 @@ h2 { /* Подзаголовок страницы (названия подразделов) */
   text-align: left;
   text-indent: 25pt;
   margin: 20pt 10pt 10pt 10pt;
-  color: #0000a3;
+  color: #2E20BE;
 }
 
 h3 { /* Подзаголовок страницы (названия подподразделов) */
   font: bold 13pt Century, serif;
   text-align: left;
-  text-indent: 10pt;
+  text-indent: 40pt;
   margin: 20pt 10pt 0pt 10pt;
-  color: #0000a3;
+  color: #2E20BE;
 }
 
 h2.cntr { /* Подзаголовок страницы (названия подразделов) с выравниванием по центру */
@@ -119,16 +120,20 @@ li.ct2 { /* Элемент содержания в реферате (уровень 2) */
 
 a { /* Простая ссылка */
 	font: 14pt Century, serif;
-	color: blue;	
-}
-
-a:hover { /* Курсор наведен на ссылку */
-	color: firebrick;
+	color: blue;
 	text-decoration: none;
 }
 
+a:hover { /* Курсор наведен на ссылку */
+	color: #0A8FD5;
+	text-decoration: underline;
+}
+
 a:visited { /* Посещенная ссылка */
-	color: #915c9e; 
+	color: #8600C4; 
+}
+.underline {
+	text-decoration: underline;
 }
 
 /* ---------------------------------------------------------------------------------------------------------- */
@@ -146,7 +151,7 @@ a:visited { /* Посещенная ссылка */
 
 #donntu { /* Блок ДонНТУ и портала магистров */
 	float: right;
-	padding: 5pt 5pt 0pt 0pt;	
+	padding: 5pt 5pt 0pt 0pt;
 	margin: 0pt 3pt 0pt 3pt;
 }
 
@@ -168,6 +173,8 @@ a:visited { /* Посещенная ссылка */
 #header { /* Блок шапки (фотография и текст) */
 	min-height: 270px;
 	clear: both;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+	border-radius: .2rem;
 }
 
 #headertext { /* Блок шапки (только текст) */
@@ -187,9 +194,9 @@ a:visited { /* Посещенная ссылка */
 }
 
 .comment { /* Блок с комментарией (в финально версии сожет не использоваться)*/
-  background: lightsteelblue; 
-  color: white; 
-  font-size: 12pt; 
+  background: #c8f3eb; 
+  color: #000; 
+  font-size: 14pt;
   margin: 0pt 20pt 0pt 20pt; 
   padding: 10pt 10pt 10pt 10pt; 
   text-indent: 0;
@@ -226,7 +233,7 @@ table#resume tr.odd { background-color: #f5f5f5;} /* Нечетная строка */
 table#resume tr.even { background-color: white;}  /* Четная строка */ 
 
 table#resume tr.odd:hover { background-color: #deebef;}  /* Курсор наведен на нечетную строку */
-table#resume tr.even:hover { background-color: #eefbff;} /* Курсор наведен на четную строку */
+table#resume tr.even:hover { background-color: #D5ECF3;} /* Курсор наведен на четную строку */
 
 /* ---------------------------------------------------------------------------------------------------------- */
 /* ------------- ПУНКТ СПИСКА БИБЛИОТЕКИ -------------------------------------------------------------------- */
@@ -346,7 +353,7 @@ table.search td.cn a:hover { color: firebrick; }    /* Подсвеченная ссылка */
 }
 
 .color { /* Цвет кнопки*/
-	color: navy;  
+	color: #000080;  
 	border: solid 1px #7496a2;
 	background: #96c1d0;
 	background: -webkit-gradient(linear, left top, left bottom, from(white), to(#96c1d0));              /* chrome, safari, opera  */
@@ -354,7 +361,7 @@ table.search td.cn a:hover { color: firebrick; }    /* Подсвеченная ссылка */
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='#96c1d0');  /* ie */
 }
 
-.color:visited { color: #6500c4; } /* Кнопка посещенной ссылки */
+.color:visited { color: #8600C4; } /* Кнопка посещенной ссылки */
   
 .color:hover { /* На кнопку наведен курсор */
 	background: #007ead;
@@ -378,17 +385,17 @@ table.search td.cn a:hover { color: firebrick; }    /* Подсвеченная ссылка */
 	position: static;
 	top: 0px;
 	cursor: auto;
-	color: #692f06; 
+	color: #182A41; 
 	font-weight: bold;  
 	text-shadow: 0px 0px 0px rgba(0,0,0,.0);
 	border: solid 1px #7496a2;
 	background: #ffd200;           
-	background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ffd200));             /* chrome, safari, opera  */
-	background: -moz-linear-gradient(top,  white,  #ffd200);                                           /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ffd200));            /*  chrome, safari, opera */
+	background: -moz-linear-gradient(top,  white,  #ffd200);                                          /*  firefox */
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='#ffd200'); /* ie */
 }
 	
 .colorfix:active  { top: 0px; }		    /* Активную кнопку не смещаем вниз при нажатии */
-.colorfix:hover   { color: #692f06; }	  /* Цвет при наведении не меняем */
+.colorfix:hover   { color: #182A41; }	  /* Цвет при наведении не меняем */
 
 

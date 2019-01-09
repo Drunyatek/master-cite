@@ -1,19 +1,28 @@
 /* -------------- ОДНА КОЛОНКА ------------------------------------------------------------------------------ */
+.container {
+	margin: 0 auto;
+	max-width: 1300px;
+}
 
 #middleblock { /* Средний блок (меню и основной текст в двухколоночной верстке, только основной текст - в одноколоночной)*/
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+	border-radius: .2rem;
 }
 	
 #maintext { /* Блок основного текста */
  	font: 14pt/120% Times new roman, serif;
 	line-height: 110%;
-  padding: 15pt 0pt 15pt 10pt;
+	padding: 15pt 0pt 15pt 10pt;
+	margin: 7px 0;
 	position: relative; 
 	display: block;
 }
 
 #menu { /* Блок верхнего меню */
+	/* background-color: #54A2BE; */
 	clear: both;
 	text-align: center;
+	margin: 7px 0;
 	padding: 2pt 0pt 10pt 0pt;
   background: #e7eef0;	
 	border-top: solid 1pt #b4cdd4;	
@@ -24,6 +33,7 @@
 	clear: both;
 	text-align: center;
 	padding: 8pt 0pt 8pt 0pt;
+	margin: 7px 0;
   background: #e7eef0;	
 	border-top: solid 1pt #b4cdd4;	
 	border-bottom: solid 1pt #b4cdd4;
