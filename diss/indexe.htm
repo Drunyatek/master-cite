@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
-  <title>Abstract - Hardware optimization in logic circuits of control units - Ivan Ivanenko</title>
+  <meta http&ndash;equiv="Content&ndash;Type" content="text/html; charset=windows&ndash;1251">
+  <title>Abstract&mdash;Research of methods for creating algorithms for the synthesis of programs based on the hardware description languages in CAD systems for computing equipment&mdash;Andrew Khvishuk</title>
   <link rel="stylesheet" type="text/css" href="../css/master_style.css">
 </head>
 
@@ -10,8 +10,8 @@
 
 	<div id="topblock">
 		<div id="langbox">
-			<a href="indexu.htm"><img src="../images/ua.png" alt="Українська" title="Українська" width="24" height="20" border=0></a> &nbsp; 
-			<a href="index.htm"><img src="../images/ru.png" alt="Русский" title="Русский" width="24" height="20" border=0></a> 
+			<a href="index.htm">Ru</a> &nbsp; 
+			<a href="indexu.htm">Ua</a>  
 		</div>
 		<div id="donntu">
 			<a href="http://donntu.org/index.php?lang=eng" target=_blank>DonNTU</a> &nbsp; 
@@ -44,9 +44,9 @@
 		
 			<h1>Abstract</h1>
 			
-			<p style="background-color: lightsteelblue; color: white; font-size: 14pt; margin: 0pt 20pt 0pt 20pt; padding: 10pt 10pt 10pt 10pt; text-indent: 0;">
-			This abstract is used as an example, with the permission of <a style="color: white; font-size: 13pt;" href="http://masters.donntu.org/2011/fknt/tatolov/">Evgeniy Tatolov</a>.<br>
-			Original: <a style="color: white; font-size: 13pt;" href="http://masters.donntu.org/2011/fknt/tatolov/diss/indexe.htm">http://masters.donntu.org/2011/fknt/tatolov/diss/indexe.htm</a></p>
+			<p style="background&ndash;color: lightsteelblue; color: white; font&ndash;size: 14pt; margin: 0pt 20pt 0pt 20pt; padding: 10pt 10pt 10pt 10pt; text&ndash;indent: 0;">
+			This abstract is used as an example, with the permission of <a style="color: white; font&ndash;size: 13pt;" href="http://masters.donntu.org/2011/fknt/tatolov/">Evgeniy Tatolov</a>.<br>
+			Original: <a style="color: white; font&ndash;size: 13pt;" href="http://masters.donntu.org/2011/fknt/tatolov/diss/indexe.htm">http://masters.donntu.org/2011/fknt/tatolov/diss/indexe.htm</a></p>
 			
 			<h2>Содержание</h2>
 			<ul class=content>
@@ -62,11 +62,11 @@
 			<h2>Introduction</h2>
 			
 			<p> Digital systems are widely used as basic elements of computer technologies, automatics, robotics, manufacturing, transport. 
-			Creation of very large-scale integration circuits (VLSI), building of systems-on-chip (SoC), development of field-programmable gate 
+			Creation of very large&ndash;scale integration circuits (VLSI), building of systems&ndash;on&ndash;chip (SoC), development of field&ndash;programmable gate 
 			arrays (FPGAs) and complex programmable logic devices (CPLDs) changed the basis of implementation digital systems and proposed 
-			increased requirements to the process of their design, which has led to the widespread using of computer-aided design (CAD) tools 
+			increased requirements to the process of their design, which has led to the widespread using of computer&ndash;aided design (CAD) tools 
 			and hardware description languages (HDLs). All this should raise quality of the resultant product, promote in realization of multifold 
-			analysis and testing. Besides, new base-oriented methods of combinational and sequential synthesis of logical circuits were created, 
+			analysis and testing. Besides, new base&ndash;oriented methods of combinational and sequential synthesis of logical circuits were created, 
 			the greatest effectiveness from which can be reached in the case of application automation and joint combined using with already known algorithms.</p>
 			
 			<p>Model of Moore finite state machine (FSM, offered by E. Moore in 1956 and named in his honor), as synchronous sequential circuit, 
@@ -108,31 +108,31 @@
 			<a name=p3></a>
 			<h2>3. An approach to the unification of synthesis of Moore FSM on FPGA</h2>
 			
-			<p>An approach to the unification of synthesis of Moore FSM on FPGA is offered in article [<a href="#ref1">1</a>]. It joints several possibilities of
+			<p>An approach to the unification of synthesis of Moore FSM on FPGA is offered in article&nbsp;<a href="#ref1">1</a>]. It joints several possibilities of
 			optimization and is directed on FPGA (fig. 1). Entity of an approach consists in sequential application of algorithmic, combinatory
-			and circuitry stages and using FPGA-oriented tools: CAD and HDLs.</p>
+			and circuitry stages and using FPGA&ndash;oriented tools: CAD and HDLs.</p>
 			
 			<div class=img>
 				<img src="images/unification_process_e.png" width=682 height=589 alt="An approach to the unification of synthesis of Moore FSM">
-				<p class=imgcaption>Figure 1 – An approach to the unification of synthesis of Moore FSM</p>
+				<p class=imgcaption>Figure 1 &mdash; An approach to the unification of synthesis of Moore FSM</p>
 			</div>
 			
-			<p>On the first step of algorithmic stage of synthesis, arbitrary Moore FSM specification is led to a uniform type – state transition
+			<p>On the first step of algorithmic stage of synthesis, arbitrary Moore FSM specification is led to a uniform type &mdash; state transition
 			table. Necessity of leading to a uniform type is caused by possibility of specification Moore FSM with the help of different
-			representation forms, such as: graph schemes of algorithm, state diagrams, ASM-diagrams (ASM – Algorithmic State Machine)
-			[<a href="#ref2">2</a>-<a href="#ref4">4</a>]. Second step of algorithmic stage consists of minimization of the state transition table. Algorithms of Brzozowski,
-			ARNES, SMAS, CHESMIN, SLIM, HSM2, STAMINA, OPTIMIST, BICA, ISM can be used for this [<a href="#ref3">3</a>, <a href="#ref5">5</a>-<a href="#ref16">16</a>].</p>
+			representation forms, such as: graph schemes of algorithm, state diagrams, ASM&ndash;diagrams (ASM &mdash; Algorithmic State Machine)
+			[<a href="#ref2">2</a>&ndash;<a href="#ref4">4</a>]. Second step of algorithmic stage consists of minimization of the state transition table. Algorithms of Brzozowski,
+			ARNES, SMAS, CHESMIN, SLIM, HSM2, STAMINA, OPTIMIST, BICA, ISM can be used for this&nbsp;<a href="#ref3">3</a>, <a href="#ref5">5</a>&ndash;<a href="#ref16">16</a>].</p>
 						
-			<p>Combinatory stage is directed on effective encoding of minimized transition table's states and, also, on receiving of hardware-minimum
+			<p>Combinatory stage is directed on effective encoding of minimized transition table's states and, also, on receiving of hardware&ndash;minimum
 			functions of the next state and, at necessity, of output functions of FSM. Considerable influence of states encoding method on
 			parameters of resultant logical circuit caused development of various approaches, directed on decreasing of power expenses,
-			high-speed performance, minimization of hardware amount. The last one of these approaches can be used on combinatory stage of
-			synthesis with the help of application, adaptation and modification of MUSTANG, MUSE, FEL-Code, JEDI, NOVA, Two-Hot Encoding,
-			DISA, one-hot  and positional-binary states encoding algorithms [<a href="#ref17">17</a>-<a href="#ref37">37</a>].</p>
+			high&ndash;speed performance, minimization of hardware amount. The last one of these approaches can be used on combinatory stage of
+			synthesis with the help of application, adaptation and modification of MUSTANG, MUSE, FEL&ndash;Code, JEDI, NOVA, Two&ndash;Hot Encoding,
+			DISA, one&ndash;hot  and positional&ndash;binary states encoding algorithms&nbsp;<a href="#ref17">17</a>&ndash;<a href="#ref37">37</a>].</p>
 			
 			<p>Circuitry stage of synthesis process assumes using Moore FSM logical circuit's construction methods, directing on reduction of
 			hardware amount of target chip. Trivial and multilevel implementations, structures with transformation of objects codes, circuits
-			on counters can be carried to these methods [<a href="#ref37">37</a>]. Modern digital design is oriented on using HDLs (basically, VHDL and Verilog),
+			on counters can be carried to these methods&nbsp;<a href="#ref37">37</a>]. Modern digital design is oriented on using HDLs (basically, VHDL and Verilog),
 			because of what the second step of circuitry stage is development of HDL program, which describes Moore FSM and is suitable for
 			processing of appropriate CAD and immersion into the chip.</p>
 			
@@ -141,39 +141,39 @@
 			to the number of other modern basis (CPLD, ASIC) and define the general direction of optimizing works at synthesis of logic
 			sequential circuits.</p>
 			
-			<p>Five Verilog-programs, describing given Moore FSM [<a href="#ref38">38</a>] (fig. 2) in various ways, were designed for an estimation of unified synthesis
+			<p>Five Verilog&ndash;programs, describing given Moore FSM&nbsp;<a href="#ref38">38</a>] (fig. 2) in various ways, were designed for an estimation of unified synthesis
 			process application to the exact example:</p>
 			
 			<div class=img>
 				<img src="images/animation.gif" width=594 height=420 alt="State diagram of Moore FSM">
 				<p class=imgcaption>
-					Figure 2 – State diagram of Moore FSM<br>(animation: 10 frames, 5 cycles of repeating, 160 kilobytes)<br>
-					(<i>x<sub>i</sub></i> – input signals, <i>y<sub>i</sub></i> – bites of state code, <i>z<sub>i</sub></i> – output signals)
+					Figure 2 &mdash; State diagram of Moore FSM<br>(animation: 10 frames, 5 cycles of repeating, 160 kilobytes)<br>
+					(<i>x<sub>i</sub></i> &mdash; input signals, <i>y<sub>i</sub></i> &mdash; bites of state code, <i>z<sub>i</sub></i> &mdash; output signals)
 				</p>
 			</div>
 			
 			<ol>
-				<li>Implementation of not minimized Moore FSM with the help of XST (Xilinx Synthesis Technology) analyzer [<a href="#ref39">39</a>] (experiment 1).
+				<li>Implementation of not minimized Moore FSM with the help of XST (Xilinx Synthesis Technology) analyzer&nbsp;<a href="#ref39">39</a>] (experiment 1).
 				<li>Implementation of minimized Moore FSM with the help of XST (Xilinx Synthesis Technology) analyzer (experiment 2).
-				<li>Implementation of minimized Moore FSM on two–level circuit [<a href="#ref40">40</a>] with positional-binary states encoding. Use of ROM with
-				    asynchronous reading [<a href="#ref39">39</a>] (experiment 3).
-				<li>Implementation of minimized Moore FSM on two–level circuit with positional-binary states encoding. Use of ROM with
-				    synchronous reading [<a href="#ref39">39</a>] and an additional signal of synchronization (experiment 4).
-				<li>Implementation of minimized Moore FSM on two–level circuit with positional-binary states encoding. Use of ROM with
+				<li>Implementation of minimized Moore FSM on two&mdash;level circuit&nbsp;<a href="#ref40">40</a>] with positional&ndash;binary states encoding. Use of ROM with
+				    asynchronous reading&nbsp;<a href="#ref39">39</a>] (experiment 3).
+				<li>Implementation of minimized Moore FSM on two&mdash;level circuit with positional&ndash;binary states encoding. Use of ROM with
+				    synchronous reading&nbsp;<a href="#ref39">39</a>] and an additional signal of synchronization (experiment 4).
+				<li>Implementation of minimized Moore FSM on two&mdash;level circuit with positional&ndash;binary states encoding. Use of ROM with
 				    synchronous reading and back front of the main signal of synchronization (experiment 5).
 			</ol>
 			
-			<p>All researches were held with the help of CAD Xilinx ISE 13.1 for the family of FPGA Xilinx Spartan-3, namely for the chip XC3S200.
+			<p>All researches were held with the help of CAD Xilinx ISE 13.1 for the family of FPGA Xilinx Spartan&ndash;3, namely for the chip XC3S200.
 			Results for cumulative hardware amount for five variants of implementation are graphically shown on fig. 3.</p>
 			
 			<div class=img>
 				<img src="images/synthesis_results_e.png" width=545 height=368 alt="Results of experiments">
-				<p class=imgcaption>Figure 3 – Results of experiments</p>
+				<p class=imgcaption>Figure 3 &mdash; Results of experiments</p>
 			</div>
 			
-			<p>If the goal of optimization is amount of LUT-cells, the best result has been received at use of two–level implementation of minimized
+			<p>If the goal of optimization is amount of LUT&ndash;cells, the best result has been received at use of two&mdash;level implementation of minimized
 			Moore FSM with synchronous ROM and two signals of synchronization (experiment 4). In comparison with experiment 1, number of slices
-			has decreased in 3 times, number of flip-flops – in 1,5 times, number of LUT-cells – in 2,5 times. However in this case has increased
+			has decreased in 3 times, number of flip&ndash;flops &mdash; in 1,5 times, number of LUT&ndash;cells &mdash; in 2,5 times. However in this case has increased
 			the total of circuit's outputs, number of synchronization signals and one RAM (Random Access Memory) module has been involved.</p>	
 			      
 			<a name=p4></a>
@@ -195,7 +195,7 @@
 				<li>Qualitative improvement of the proposed approach to the unification of the synthesis of Moore automata, its complement and expand.
 				<li>Delimitation of the effectiveness of different variants of the basic stages of a unified process for the synthesis of Moore automata.
 				<li>Adaptation of known methods of constructing the logic of Moore automata to the base FPGA.
-				<li>Develop cross-platform functionality and computer-aided design of Moore automata (CAD) software that implements the proposed unified process synthesis.
+				<li>Develop cross&ndash;platform functionality and computer&ndash;aided design of Moore automata (CAD) software that implements the proposed unified process synthesis.
 			</ol>
 
 			<p>This master's work is not completed yet. Final completion: December 2011. 
@@ -203,50 +203,9 @@
 			
 			<a name=ref></a>
 			<h2>References</h2>
-			<ol>
-				<li><a name="ref1"></a>Ковалев С.А. Подход к унификации процесса синтеза МПА Мура для FPGA / С.А. Ковалев, И.Я. Зеленёва, Е.Р. Татолов // Материалы Двенадцатого международного научно-практического семинара &laquo;Практика и перспективы развития партнерства в сфере высшей школы&raquo;. – Донецк-Таганрог, 2011. – Том 2. – С. 45-48.
-				<li><a name="ref2"></a>Mano M. Digital design / M. Mano. – Prentice Hall, 2003. – 516 pp.
-				<li><a name="ref3"></a>Nelson V. Digital logic circuit analysis and design / V. Nelson, H. Nagle, J. Irwin, B. Carroll. – Prentice Hall, 1995. – 842 pp.
-				<li><a name="ref4"></a>Barkalov A.A. Synthesis of operational and control automata / A.A. Barkalov, L.A. Titarenko. – Donetsk: DonNTU, TechPark DonNTU UNITECH, 2009. – 256 pp.
-				<li><a name="ref5"></a>Avedillo M.J. New approach to the state reduction in incompletely specified sequential machines / M.J. Avedillo, J.M. Quintana, J.L. Huertas // Proceedings of IEEE International Symposium on Circuits and Systems. – New Orleans, 1990. – pp. 440-443.
-				<li><a name="ref6"></a>Avedillo M.J. SMAS: a program for the concurrent state reduction and state assignment of finite state machines / M.J. Avedillo, J.M. Quintana, J.L. Huertas // Proceedings of IEEE International Symposium on Circuits and Systems. – 1991. – vol. 3. – pp. 1781-1784.
-				<li><a name="ref7"></a>Champarnaud J.-M. Split and minimizing: Brzozowski's algorithm / J.-M. Champarnaud, A. Khorsi, T. Paranthoen // Prague Stringology Conference. – Prague, 2002. – pp. 96-104.
-				<li><a name="ref8"></a>Goren S. CHESMIN: a heuristic for state reduction in incompletely specified finite state machines / S. Goren, F. Ferguson // Proceedings of the Conference on Design, Automation and Test in Europe. – 2002. – pp. 248-254.
-				<li><a name="ref9"></a>Higuchi H. A fast state reduction algorithm for incompletely specified finite state machines / H. Higuchi, Y. Matsunaga // 33rd Annual Conference of Design Automation. – Las Vegas, 1996. – pp. 463-466.
-				<li><a name="ref10"></a>Hu H. HSM2: a new heuristic state minimization algorithm for finite state machine / H. Hu, H.-X. Xue, J.-N. Bian // Journal of Computer Science and Technology. – 2004. – № 19 (5). – pp. 729-733.
-				<li><a name="ref11"></a>Rho J.-K. Exact and heuristic algorithms for the minimization of incompletely specified state machines / J.-K. Rho, G. Hachtel, F. Somenzi, R. Jacoby // IEEE Transactions on Computer-Aided Design. – 1994. – vol. 13. – pp. 167-177.
-				<li><a name="ref12"></a>Xu Y. Describing an n log n algorithm for minimizing states in deterministic finite automaton [Электронный ресурс]. – Режим доступа: <a href="http://www.cs.sun.ac.za/rw711/documentation/hopcroft2.pdf">http://www.cs.sun.ac.za...</a>.
-				<li><a name="ref13"></a>Fuhrer R.M. OPTIMIST: state minimization for optimal 2-level logic implementation / R.M. Fuhrer, S.M. Nowick // Proceedings of International Conference of Computer-Aided Design. – 1997. – pp. 308-315.
-				<li><a name="ref14"></a>Pena J.M. A new algorithm for exact reduction of incompletely specified finite state machines / J.M. Pena, A.L. Oliveira // IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems. – 1999. – vol. 18 (11). – pp. 1619-1632.
-				<li><a name="ref15"></a>Kam T. A fully implicit algorithm for exact state minimization / T. Kam, T. Villa, R. Brayton, A. Sangiovanni-Vincentelli // Proceedings of the Design Automation Conference. – 1994. – pp. 684-690.
-				<li><a name="ref16"></a>Almeida M. On the performance of automata minimization algorithms / M. Almeida, N. Moreira, R. Reis // Technical Report Series: DCC-2007-03. – 2007. – 12 pp.
-				<li><a name="ref17"></a>Slusarczyk A. State assignment techniques – short review [Электронный ресурс]. – Режим доступа: <a href="http://web.cecs.pdx.edu/~mperkows/nov17/051.slusarczyk-state-assignment-review.pdf">http://web.cecs.pdx.edu...</a>.
-				<li><a name="ref18"></a>De Micheli G. KISS: a program for optimal state assignment of finite state machines / G. De Micheli, R. Brayton, A. Sangiovanni-Vincentelli // Proceedings of IEEE International Conference of Computer-Aided Design. – Santa Clara, 1984. – pp. 209-211.
-				<li><a name="ref19"></a>De Micheli G. Optimal state assignment for finite state machines / G. De Micheli, R. Brayton, A. Sangiovanni-Vincentelli // IEEE Transactions on Computer-Aided Design. – 1985. – pp. 269-285.
-				<li><a name="ref20"></a>De Micheli G. Optimal encoding of control logic / G. De Micheli // Proceedings of the International Conference on Circuits and Computer Design. – 1984. – pp. 16-22.
-				<li><a name="ref21"></a>El-Maleh A. Finite state machine state assignment for area and power minimization / A. El-Maleh, S.M. Sait, F.N. Khan // Proceedings of IEEE International Symposium on Circuits and Systems. – 2006. – pp. 5303-5306.
-				<li><a name="ref22"></a>Devadas S. MUSTANG: state assignment of finite state machines targeting multilevel logic implementations / S. Devadas, H.-K. Ma, A.R. Newton, A. Sangiovanni-Vincentelli // IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems. – 1998. – vol. 7 (12). – pp. 1290-1300.
-				<li><a name="ref23"></a>Du X. MUSE: a multilevel symbolic encoding algorithm for state assignment / X. Du, G. Hachtel, B. Lin, A.R. Newton // IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems. – 1991. – vol. 10 (1). – pp. 28-38.
-				<li><a name="ref24"></a>Kubatova H. FEL-Code: FSM internal state encoding method / H. Kubatova, M. Becvar // Proceedings of 5th International Workshop on Boolean Problems. – Freiberg, 2002. – pp. 109-114.
-				<li><a name="ref25"></a>Lin B. Synthesis of multiple level logic from symbolic high-level description languages / B. Lin, A.R. Newton // Proceedings of the International Conference on VLSI. – Munich, 1989. – pp. 187-196.
-				<li><a name="ref26"></a>Villa T. NOVA: state assignment of finite-state machines for optimal two-level logic implementation / T. Villa, A. Sangiovanni-Vincentelli // IEEE Transactions on Computer-Aided Design. – 1990. – pp. 905-924.
-				<li><a name="ref27"></a>Gupta, B.N.V.M. A state assignment scheme targeting performance and area / B.N.V.M. Gupta, H. Narayanan, M.P. Desai // Proceedings of 12th International Conference on VLSI Design. – 1999. – pp. 378-383.
-				<li><a name="ref28"></a>Martinez M. A dynamic model for the state assignment problem / M. Martinez, M.J. Avedillo, J.M. Quintana, J.L. Huertas // Proceedings of Design, Automation and Test in Europe. – Paris, 1998. – pp. 835-839.
-				<li><a name="ref29"></a>Golson S. One-hot state machine design for FPGAs / S. Golson // Proceedings of the 3rd PLD Design Conference. – Santa Clara, 1993. – pp. 1-6.
-				<li><a name="ref30"></a>Almaini A. State assignment of finite state machines using a genetic algorithm / A. Almaini, J. Miller, P. Thomson, S. Billina // IEEE Proceedings on Computer and Digital Techniques. – 1995. – pp. 279-286.
-				<li><a name="ref31"></a>Amaral J. Designing genetic algorithms for the state assignment problem / J. Amaral, K. Turner, J. Chosh // IEEE Transactions on Systems, Man, and Cybernetics. – 1995. – vol. 25. – pp. 659-694.
-				<li><a name="ref32"></a>Chyzy M. Evolutionary algorithm for state assignment of finite state machines / M. Chyzy, W. Kosinski // Artificial Intelligence Methods. – Gliwice, 2003. – pp. 51-52.
-				<li><a name="ref33"></a>Nedjah N. Evolutionary synthesis of synchronous finite state machines / N. Nedjah, L.M. Mourelle // Evolvable Machines. – Berlin, 2004. – pp. 103-128.
-				<li><a name="ref34"></a>Chattopadhyay S. Area conscious state assignment with flip-flop and output polarity selection for finite state machine synthesis – a genetic algorithm approach / S. Chattopadhyay // The Computer Journal. – 2005. – vol. 48 (4). – pp. 443-450.
-				<li><a name="ref35"></a>Hasteer G. Parallel algorithms for state assignment of finite state machines. Master's thesis. – University of Illinois, 1996. – 58 pp.
-				<li><a name="ref36"></a>Bader D.A. A parallel state assignment algorithm for finite state machines / D.A. Bader, K. Madduri // Proceedings of IEEE Conference on High-Performance Computing. – Bangalore, 2004. – pp. 297-308.
-				<li><a name="ref37"></a>Баркалов А.А. Синтез микропрограммных автоматов на заказных и программируемых СБИС / А.А. Баркалов, Л.А. Титаренко. – Донецк: ДонНТУ, Технопарк ДонНТУ УНИТЕХ, 2009. – 336 с.
-				<li><a name="ref38"></a>Уилкинсон Б. Основы проектирования цифровых схем / Б. Уилкинсон. – М.: Издательский дом <q>Вильямс</q>, 2004. – 320 с.
-				<li><a name="ref39"></a>XST User Guide for Virtex-4, Virtex-5, Spartan-3, and Newer CPLD Devices [Электронный ресурс]. – Режим доступа: <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx13_1/xst.pdf">http://www.xilinx.com...</a>.
-				<li><a name="ref40"></a>Баркалов А.А. Синтез устройств управления на программируемых логических устройствах / А.А. Баркалов. – Донецк: ДонНТУ, 2002. – 262 с.
-			</ol>
+			
 		
-		</div> <!-- maintext -->
+		</div> <!--  maintext -->
 	
 	</div> <!-- middleblock -->
 
