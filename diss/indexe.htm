@@ -7,7 +7,7 @@
 </head>
 
 <body lang="en">
-
+<div class="container">
 	<div id="topblock">
 		<div id="langbox">
 			<a href="index.htm">Ru</a> &nbsp; 
@@ -21,15 +21,15 @@
 
 	<div id="header">
 		<div id="photomag">
-			<a href="../ivanenko_big.jpg"><img src="../photo.jpg" title="DonNTU Master Ivan Ivanenko" alt="DonNTU Master Ivan Ivanenko" border=0></a>
+			<a href="../khvishuk_big.jpg"><img src="../photo.jpg" width=180 height=240 title="DonNTU Master Andrew Khvishuk" alt="DonNTU Master Andrew Khvishuk"></a>
 		</div>
 		<div id="headertext">
-			<h2 class="hdr">Ivan Ivanenko</h2>
-			<h3 class="hdr">Faculty	of computer science and technology (CST)</h3>
-			<h3 class="hdr">Department	of computer engineering (CE)</h3>
-			<h3 class="hdr">Speciality <q>Computer systems and networks</q></h3>
-			<h1 class="hdr">Hardware optimization in logic circuits of control units</h1>
-			<h3 class="hdr">Scientific adviser: Ph.D., Professor Petr Petrenko</h3>
+			<h1 class="hdr">Andrew Khvishuk</h1>
+			<h3 class="hdr">Faculty	of computer science and technology</h3>
+			<h3 class="hdr">Department	of software engineering</h3>
+			<h3 class="hdr">Speciality <q>Computer-aided design systems</q></h3>
+			<h2 class="hdr">Research of methods for creating algorithms for the synthesis of programs based on the hardware description languages in CAD systems for computing equipment</h2>
+			<h3 class="hdr">Scientific adviser: Professor A.Grigoriev</h3>
 		</div>
 	</div>
 
@@ -43,167 +43,205 @@
 		<div id="maintext">
 		
 			<h1>Abstract</h1>
-			
-			<p style="background&ndash;color: lightsteelblue; color: white; font&ndash;size: 14pt; margin: 0pt 20pt 0pt 20pt; padding: 10pt 10pt 10pt 10pt; text&ndash;indent: 0;">
-			This abstract is used as an example, with the permission of <a style="color: white; font&ndash;size: 13pt;" href="http://masters.donntu.org/2011/fknt/tatolov/">Evgeniy Tatolov</a>.<br>
-			Original: <a style="color: white; font&ndash;size: 13pt;" href="http://masters.donntu.org/2011/fknt/tatolov/diss/indexe.htm">http://masters.donntu.org/2011/fknt/tatolov/diss/indexe.htm</a></p>
-			
-			<h2>Содержание</h2>
+			<div class = "comment">
+				<p> When writing this abstract the master's work is not completed yet. Final Completion: June 2019. The full text of the work and materials on the topic can be obtained from the author or his manager after the specified date. </ P>
+			</div>
+			<h2>Content</h2>
 			<ul class=content>
 				<li class=ct1><a href="#p0">Introduction</a>
 				<li class=ct1><a href="#p1">1. Theme urgency</a>
 				<li class=ct1><a href="#p2">2. Goal and tasks of the research</a>
-				<li class=ct1><a href="#p3">3. An approach to the unification of synthesis of Moore FSM on FPGA</a>
+				<li class=ct1><a href="#p3">3. Review of research and development</a>
+				<li class=ct1><a href="#p31">3.1 Review of international sources</a>
+				<li class=ct1><a href="#p32">3.2 Review of local sources</a>
+				<li class=ct1><a href="#p4">4. CAD Analysis Vilado by Xilinx</a>
+				<li class=ct1><a href="#p5">5. Using TMO for the organization of logical inference</a>
+				<li class=ct1><a href="#p6">6. Task setting and description of the developed add-in</a>
 				<li class=ct1><a href="#p4">Conclusion</a>
 				<li class=ct1><a href="#ref">References</a>
 			</ul>
 			
-			<a name=p0></a>
+			<a name="p0"></a>
 			<h2>Introduction</h2>
 			
-			<p> Digital systems are widely used as basic elements of computer technologies, automatics, robotics, manufacturing, transport. 
-			Creation of very large&ndash;scale integration circuits (VLSI), building of systems&ndash;on&ndash;chip (SoC), development of field&ndash;programmable gate 
-			arrays (FPGAs) and complex programmable logic devices (CPLDs) changed the basis of implementation digital systems and proposed 
-			increased requirements to the process of their design, which has led to the widespread using of computer&ndash;aided design (CAD) tools 
-			and hardware description languages (HDLs). All this should raise quality of the resultant product, promote in realization of multifold 
-			analysis and testing. Besides, new base&ndash;oriented methods of combinational and sequential synthesis of logical circuits were created, 
-			the greatest effectiveness from which can be reached in the case of application automation and joint combined using with already known algorithms.</p>
-			
-			<p>Model of Moore finite state machine (FSM, offered by E. Moore in 1956 and named in his honor), as synchronous sequential circuit, 
-			is the part of numerous digital systems and is used in construction of control devices. High complexity of integrated circuits 
-			(which is increasing, according to the G. Moore's law) and theoretical basis of automatic calculations make possible the implementation 
-			of comprehensive algorithms of processing information. However direct realization of algorithms can lead to inefficient using of 
-			crystal's resources and extension of project's cost.</p>
-			
-			
-			<a name=p1></a>
+			<p>Today, FPGA design is one of the fastest growing subject areas. This is due to the fact that the number of different gadgets, for which chips are needed, only grows, and every year it is only stronger. The need to provide the market with the necessary volume of products forces engineers to reduce the time of manufacture of the final product, and, as a result, automate the design process.
+			</p>
+					
+			<p> The effectiveness of design processes in any subject areas is largely determined by the availability and degree of development of tools that allow the designer to formalize and reuse expert techniques for designing certain products. Design techniques are designed to significantly simplify designer solution of the design problem, based on the requirements of the technical specifications for the product (TK). Such tools allow you to create design techniques, save them, edit, and - apply as needed. The effect in this case is to reduce the time and complexity of the process of making design decisions.
+			</p>
+					
+			<a name="p1"></a>
 			<h2>1. Theme urgency</h2>
-			
-			<p>The number of methods of Moore FSM's hardware optimization is known: minimization of the amount of states (state reduction) 
-			and their specific encoding (state assignment), using features of target basis and algorithm of functioning, multilevel 
-			logic circuit's implementation. Mentioned methods are quite effective, but for getting the most economic FSM's implementation 
-			they have to be used jointly.</p>
-			
-			<p>Master's work is dedicated to the actual scientific task of development a unified approach to the synthesis of Moore FSM, 
-			which is directing on hardware amount reduction in resultant device and is including algorithmic, combinatory and circuitry 
-			optimizing techniques. FPGAs by Xilinx, which combine functionality, programmability and availability to consumers, 
-			are used as the target basis. CAD Xilinx ISE, Verilog HDL and Java SE are applied as tools of the research.</p>
-			
-			<a name=p2></a>
-			<h2>2. Goal and tasks of the research</h2>
-			
-			<p>Development of an approach to the unification of synthesis Moore FSM, directing on hardware amount reduction in FPGA is the goal of research.</p>
-			<p>Main tasks of the research:</p>
-			<ol>
-				<li>Analysis methods of minimization amount of states in completely and incompletely specified Moore FSM.
-				<li>Estimation ways of hardware amount reduction with the help of encoding states of Moore FSM.
-				<li>Search and detection characteristics of existing construction methods of logic circuits of Moore FSM and estimation possibilities of their use on FPGA.
-				<li>Association of functionally different optimization directions of Moore FSM hardware amount into the unified approach to synthesis and formation recommendations for it's use.
-				<li>Design of alternative variants of basic stages of unified Moore FSM synthesis process and estimate of it's efficiency.
-			</ol>
-			
-			<p><span class=itl>Research object</span>: Moore FSM synthesis.</p>
-			<p><span class=itl>Research subject</span>: association of hardware amount reduction methods at Moore FSM implementation on FPGA.</p>
-			
-			<a name=p3></a>
-			<h2>3. An approach to the unification of synthesis of Moore FSM on FPGA</h2>
-			
-			<p>An approach to the unification of synthesis of Moore FSM on FPGA is offered in article&nbsp;<a href="#ref1">1</a>]. It joints several possibilities of
-			optimization and is directed on FPGA (fig. 1). Entity of an approach consists in sequential application of algorithmic, combinatory
-			and circuitry stages and using FPGA&ndash;oriented tools: CAD and HDLs.</p>
-			
-			<div class=img>
-				<img src="images/unification_process_e.png" width=682 height=589 alt="An approach to the unification of synthesis of Moore FSM">
-				<p class=imgcaption>Figure 1 &mdash; An approach to the unification of synthesis of Moore FSM</p>
-			</div>
-			
-			<p>On the first step of algorithmic stage of synthesis, arbitrary Moore FSM specification is led to a uniform type &mdash; state transition
-			table. Necessity of leading to a uniform type is caused by possibility of specification Moore FSM with the help of different
-			representation forms, such as: graph schemes of algorithm, state diagrams, ASM&ndash;diagrams (ASM &mdash; Algorithmic State Machine)
-			[<a href="#ref2">2</a>&ndash;<a href="#ref4">4</a>]. Second step of algorithmic stage consists of minimization of the state transition table. Algorithms of Brzozowski,
-			ARNES, SMAS, CHESMIN, SLIM, HSM2, STAMINA, OPTIMIST, BICA, ISM can be used for this&nbsp;<a href="#ref3">3</a>, <a href="#ref5">5</a>&ndash;<a href="#ref16">16</a>].</p>
+					
+			<p>When designing FPGAs, engineers use the most advanced software systems that take on such cost-consuming operations as circuit tracing, time analysis, checking for inconsistencies and errors, etc. But to work with any of the packages that now exist on the market, the designer must still have a high level of domain knowledge. In addition, for leading companies in the field of computer engineering design (and not only for them) there is a problem: <q>How to preserve the knowledge and experience of employees?</q> And, moreover: <q>How to extract practical benefits from this?</q>.
+					</p>
+					
+					<p>In this regard, the following task arises: the creation of a knowledge base of FPGA design. The knowledge base, at the moment, is the most modern and technological solution in the field of data storage. It will allow not only to preserve the experience gained by years of employees, but also be able to apply it to the synthesis of new products&nbsp;<a href="#ref1">[1]</a>.</p>
+					
+					<a name="p2"></a>
+					<h2>2. Goal and tasks of the research</h2>
+					
+					<p>The purpose of the study of this work is:</p>
+					<ol>
+						<li>Analyze existing CAD FPGA and identify their main positive qualities;</li>
+						<li>Analyze existing approaches to create logical inference machines;</li>
+						<li>Choose the best approach to implement the knowledge base and justify the decision.</li>
+						<li>Describe the structure of the software being developed.</li>
+					</ol>
+					<p><span class=itl>The object of study</span> of this work is the practical implementation of the knowledge base in the form of add-on CAD CEA.</p>
+		
+					<a name="p3"></a>
+					<h2>3. Review of research and development</h2>
+		
+					<a name="p31"></a>
+					<h3>3.1 Review of international sources</h3>
+		
+					<p>
+						AT work <q>Automated sports rim design in CAD system</q> M.S.&nbsp;Abdul Karim и Ahmad&nbsp;Zulhakim Ab&nbsp;Rashid&nbsp;<a href="#ref2">[2]</a>
+						explore cosiness ways to create automation at the design stage to reduce the design time within the computer-aided design (CAD) package. It became clear that one of the most effective ways to implement automation in design is to automate the repetitive steps that must be performed each time a part is created. This project was aimed at developing a way to automate repetitive steps, and a case study was conducted on the design of the wheel rim.
+					</p>
+					<p>AT work <q>A Methodology of Knowledge Management Based on Ontology in Collaborative Design</q>
+						Junming&nbsp;Hou, Chong&nbsp;Su, Yingying&nbsp;Su, Wanshan&nbsp;Wang&nbsp;<a href="#ref3">[3]</a> proposed methodology of knowledge management in the joint design, introduces the concept of collaborative design and knowledge management, as well as introduced the expression of knowledge based on ontology.
+					</p>
+					
+					<a name="p32"></a>
+					<h3>3.2 Overview of local sources</h3>
+					
+					<p>Among the masters of DonNTU are the following publications.</p>
+					
+					<p>In the master's work Oh.B.&nbsp;Malyavka<q>Исследование способов организации построения 
+						инструментальной интеллектуальной оболочки для проектирования сложных объектов на 
+						базе экспертных методик</q>&nbsp;<a href="#ref5">[5]</a> promoted analysis of existing tools Build oeniya CAD, improvements to existing algorithms. An assessment of their efficiency was carried out and a toolkit was built with their help for automating the creation of problem-oriented CAD systems.
+					</p>
+					
+					<a name="p4"></a>
+					<h2>4. CAD Analysis Vivado by Xilinx</h2>
+
+					<p>Vivado Design Suite &mdash; is a software package developed by Xilinx for the synthesis and analysis of HDL projects , replacing the Xilinx ISE with additional functions for developing systems on chips ( System on Chip , SoC ) and high level synthesis ( High - Level) Synthesis ) . Unlike ISE, which was used for modeling ModelSim , Vivado System Edition includes an integrated logic simulator&nbsp;<a href="#ref7">[7]</a>.</p>
+		
+					<p>Vivado allows developers to synthesize projects, perform time analysis, study RTL diagrams, simulate the project's response to various influences and customize the target device with the help of a programmer. Vivado is an Xilinx FPGA product development environment, closely related to the architecture of such chips, and cannot be used with other manufacturers' FPGA products.</p>
+		
+					<p>The composition of Vivado The following components are included:</p>
+		
+					<ul>
+						<li><span class="bld">Vivado compiler High-Level Synthesis</span> allows you to describe C, C ++ and SystemC schemas for Xilinx devices without the need to create an RTL manually. Vivado HLS is widely considered to increase developer productivity, and it is confirmed that it supports C ++ classes , templates, functions, and operator overloading. In Vivado 2014.1 adds support for automatic conversion OpenCL kernels in the IP for Xilinx devices. OpenCL cores are programs that run on different platforms CPU, GPU and FPGA.
+						</li>
 						
-			<p>Combinatory stage is directed on effective encoding of minimized transition table's states and, also, on receiving of hardware&ndash;minimum
-			functions of the next state and, at necessity, of output functions of FSM. Considerable influence of states encoding method on
-			parameters of resultant logical circuit caused development of various approaches, directed on decreasing of power expenses,
-			high&ndash;speed performance, minimization of hardware amount. The last one of these approaches can be used on combinatory stage of
-			synthesis with the help of application, adaptation and modification of MUSTANG, MUSE, FEL&ndash;Code, JEDI, NOVA, Two&ndash;Hot Encoding,
-			DISA, one&ndash;hot  and positional&ndash;binary states encoding algorithms&nbsp;<a href="#ref17">17</a>&ndash;<a href="#ref37">37</a>].</p>
-			
-			<p>Circuitry stage of synthesis process assumes using Moore FSM logical circuit's construction methods, directing on reduction of
-			hardware amount of target chip. Trivial and multilevel implementations, structures with transformation of objects codes, circuits
-			on counters can be carried to these methods&nbsp;<a href="#ref37">37</a>]. Modern digital design is oriented on using HDLs (basically, VHDL and Verilog),
-			because of what the second step of circuitry stage is development of HDL program, which describes Moore FSM and is suitable for
-			processing of appropriate CAD and immersion into the chip.</p>
-			
-			<p>The described unified synthesis process can be successfully implemented automatically and assume only user's administrative functions:
-			describing of Moore FSM and choosing algorithms and structures, which should be used. Moreover, presented approach can be applied
-			to the number of other modern basis (CPLD, ASIC) and define the general direction of optimizing works at synthesis of logic
-			sequential circuits.</p>
-			
-			<p>Five Verilog&ndash;programs, describing given Moore FSM&nbsp;<a href="#ref38">38</a>] (fig. 2) in various ways, were designed for an estimation of unified synthesis
-			process application to the exact example:</p>
-			
-			<div class=img>
-				<img src="images/animation.gif" width=594 height=420 alt="State diagram of Moore FSM">
-				<p class=imgcaption>
-					Figure 2 &mdash; State diagram of Moore FSM<br>(animation: 10 frames, 5 cycles of repeating, 160 kilobytes)<br>
-					(<i>x<sub>i</sub></i> &mdash; input signals, <i>y<sub>i</sub></i> &mdash; bites of state code, <i>z<sub>i</sub></i> &mdash; output signals)
-				</p>
-			</div>
-			
-			<ol>
-				<li>Implementation of not minimized Moore FSM with the help of XST (Xilinx Synthesis Technology) analyzer&nbsp;<a href="#ref39">39</a>] (experiment 1).
-				<li>Implementation of minimized Moore FSM with the help of XST (Xilinx Synthesis Technology) analyzer (experiment 2).
-				<li>Implementation of minimized Moore FSM on two&mdash;level circuit&nbsp;<a href="#ref40">40</a>] with positional&ndash;binary states encoding. Use of ROM with
-				    asynchronous reading&nbsp;<a href="#ref39">39</a>] (experiment 3).
-				<li>Implementation of minimized Moore FSM on two&mdash;level circuit with positional&ndash;binary states encoding. Use of ROM with
-				    synchronous reading&nbsp;<a href="#ref39">39</a>] and an additional signal of synchronization (experiment 4).
-				<li>Implementation of minimized Moore FSM on two&mdash;level circuit with positional&ndash;binary states encoding. Use of ROM with
-				    synchronous reading and back front of the main signal of synchronization (experiment 5).
-			</ol>
-			
-			<p>All researches were held with the help of CAD Xilinx ISE 13.1 for the family of FPGA Xilinx Spartan&ndash;3, namely for the chip XC3S200.
-			Results for cumulative hardware amount for five variants of implementation are graphically shown on fig. 3.</p>
-			
-			<div class=img>
-				<img src="images/synthesis_results_e.png" width=545 height=368 alt="Results of experiments">
-				<p class=imgcaption>Figure 3 &mdash; Results of experiments</p>
-			</div>
-			
-			<p>If the goal of optimization is amount of LUT&ndash;cells, the best result has been received at use of two&mdash;level implementation of minimized
-			Moore FSM with synchronous ROM and two signals of synchronization (experiment 4). In comparison with experiment 1, number of slices
-			has decreased in 3 times, number of flip&ndash;flops &mdash; in 1,5 times, number of LUT&ndash;cells &mdash; in 2,5 times. However in this case has increased
-			the total of circuit's outputs, number of synchronization signals and one RAM (Random Access Memory) module has been involved.</p>	
-			      
-			<a name=p4></a>
-			<h2>Conclusion</h2>
-			<p>Qualitative synthesis of digital systems, and Moore automata in particular, is one of the areas of logic design, 
-			and is not only theoretical research but also of practical interest. Development of optimal digital devices opens the way for 
-			more efficient use of capacity basis the implementation of <q>compaction</q> of projects, reduce material costs.</p>
-			
-			<p>Master's work is devoted to actual scientific problem of combining the basic methods of minimizing the instrumental Moore automata. In the trials carried out:</p>
-			<ol>
-				<li>The structure of a unified process for the synthesis of Moore automata and defines the functions of its components.
-				<li>Based on analysis of the literature highlights the main algorithms that can be used in the proposed approach to the unification of the synthesis of Moore automata.
-				<li>A number of experiments on the use of a unified process for the synthesis of Moore automata, analyzed the results.
-				<li>The possibilities of integrated automation of the developed approach to the unification of the synthesis of Moore automata are estimated requirements for the software by searching for functionally similar software synthesis of sequential logic circuits.
-			</ol>
+						<div class="img">
+							<img src="images/image1.gif" alt="Simplified design route in Vivado HLS">
+							<p class="imgcaption">Figure 1 &mdash; Simplified design route in Vivado HLS</p>
+							<p class="imgcaption">(animation: 8 frames, delay 2s, 8 cycles of repeating, 39,8 KB)</p>
+						</div>
+		
+						<li><span class="bld">Vivado Simulator</span> &mdash; compiled language simulator that supports mixed languages, TCL scripts, encrypted IP, and advanced validation.
+						</li>
+		
+						<div class="img">
+							<img src="images/image2.jpg" alt="Example of simulation in Vivado Similator">
+							<p class="imgcaption">Figure 2 &mdash; Example of simulation in Vivado Similator</p>
+						</div>
+		
+						<li><span class="bld">Vivado IP Integrator</span> allows engineers to quickly integrate and configure IP from the Xilinx large IP library . The integrator is also configured for MathWorks projects. Simulink, created using the Xilinx system generator and high-level Vivado synthesis .
+						</li>
+		
+						<div class="img">
+							<img src="images/image3.jpg" alt="Design process using Vivado IP Integrator">
+							<p class="imgcaption">Figure 3 &mdash; Design process using Vivado IP Integrator</p>
+						</div>
+		
+						<li><span class="bld">Vivado TCL Store</span> &mdash; is a scripting system for developing add-ons for Vivado , and you can use it to add and modify Vivado features . TCL stands for Tool Command Language is the scripting language on which Viv ado itself is based . All basic Vivado functions can be called and controlled via TCL scripts.
+						</li>
+					</ul>
+		
+					<p>From the above, the following advantages and disadvantages of Vivado CAD software can be identified. Design Suite :</p>
+		
+					<ul><p><span class="underline">Advantages:</span></p>
+						<li>Availability of powerful tools to automate the process of tracing, placement, temporary analysis of schemes.</li>
+						<li> Availability of tools for high-level circuit synthesis in C , C ++ and System - C languages.</li>
+						<li>The possibility of managing the entire development cycle using the script language Tcl.</li>
+						<li>Ability to design circuits using various methodologies: RTL - descriptions, IP - cores, hardware description languages, high level synthesis.</li>
+					</ul>
+		
+					<ul><p><span class="underline">Disadvantages:</span></p>
+						<li>There is no possibility of specifying a design algorithm as a design technique for a certain class of devices with the subsequent re-use of this algorithm.</li>
+						<li>Для работы с САПР Vivado Design Suite проектировщик должен обладать высоким уровнем знания предметной области.To work with Vivado CAD Design Suite the designer must have a high level of knowledge of the subject area.</li>
+					</ul>
 
-			<p>Further studies focused on the following aspects:</p>
-			<ol>
-				<li>Qualitative improvement of the proposed approach to the unification of the synthesis of Moore automata, its complement and expand.
-				<li>Delimitation of the effectiveness of different variants of the basic stages of a unified process for the synthesis of Moore automata.
-				<li>Adaptation of known methods of constructing the logic of Moore automata to the base FPGA.
-				<li>Develop cross&ndash;platform functionality and computer&ndash;aided design of Moore automata (CAD) software that implements the proposed unified process synthesis.
-			</ol>
+					<a name="p5"></a>
+		
+					<h2>5. Using TMO for the organization of logical inference.</h2>
 
-			<p>This master's work is not completed yet. Final completion: December 2011. 
-			The full text of the work and materials on the topic can be obtained from the author or his head after this date.</p>
-			
-			<a name=ref></a>
+					<p>The use of set-theoretic operations (TMO) for the organization of logical inference was described in detail in the works of A.&nbspGrigoryev.&nbsp;<a href="#ref10">[10&ndash;12]</a>.
+					</p>
+		
+					<p>Briefly present the principle of operation of the logical inference engine based on TMT can be as follows :</p>
+		
+					<ul>
+						<li>They are implemented (TMO) over the existing prototypes as a combination of structural components that have certain features;</li>
+						<li>By lassification of a separate level, there is an AND-OR tree, where each node has a list of prototypes that have a given prize (input-output).</li>
+						<li>The search for the required solution (prototype) is carried out through a dialogue, where each step involves the selection of a specific OR node followed by the continuation of the dialogue.</li>
+						<li>After the selection step, the remaining prototypes are narrowed down, as well as the removal of those OR nodes, where the number of prototypes has reached 0.</li>
+					</ul>
+		
+					<a name="p6"></a>
+		
+					<h2>6. Task setting and description of the add-in under development </h2>
+		
+					<p>As in all considered CADs there are such disadvantages as: 1) the inability to specify the design algorithm as a design technique for a certain class of devices with the subsequent re- use of this algorithm; 2) high requirements to the level of knowledge of the designer of the subject area; then there is a corresponding task: to create a software add-on over CAD FPGA for the possibility of creating a design algorithm for its reuse.
+					</p>
+		
+					<p>The developed software must meet the following requirements:</p>
+		
+					<ol>
+						<li>The software add-on is created to summarize the user experience, which will later be used to create new products. Therefore, the existing component libraries should be fed into the system. It is assumed that they are already debugged and do not need to be checked.
+						</li>
+						<li>The add-in should simplify the design process by automating it.</li>
+						<li> The system should reduce the requirements for the level of knowledge of the designer.</li>
+						<li> The system should reduce the requirements for the level of knowledge of the designer.
+						</li>
+						<li>The logical conclusion of the program should be organized with the help of TMT. The choice in favor of this campaign was made for the following reasons:
+							<ol>
+								<li>When using packages like Clips and Protege increases the requirements for the designer in the field of knowledge organization.</li>
+								<li>In addition, there is a need to customize the software interaction between Clips / Protege and the superstructure above CAD.</li>
+								<li>The approach with the use of TMT requires us to only program implementation of the approach itself.</li>
+							</ol>
+						</li>
+						<li>The system should implement the so-called <q>stupid expert</q> approach&nbsp;<a href="#ref13">[13]</a>. 
+							A <q>stupid expert</q> &mdash; is a designer who lacks knowledge organization skills. In this case, the system itself undertakes all the work on the organization of knowledge (training, building a decision tree, the logical conclusion).
+						</li>
+						<li>The system should be implemented as a superstructure over the Vivado CAD system. Design Suite , because it is the most advanced of all considered packages and one of the most popular among designers.
+						</li>
+					</ol>
+		
+					<a name="p7"></a>
+		
+					<h2>Conclusion</h2>
+					
+					<p>As a result of research work, materials were collected and studied on issues related to the theme of master's work.
+					</p>
+					
+					<p>The study analyzed the existing CAD REA, methods for creating logical inference machines, described the structure of the software being developed.					</p>
+									
+					<p>Automation of the design process is an important task , as it will significantly reduce the development time of the final product. In addition, today it is not fully implemented, and the one who makes it the first will have a significant advantage over competitors.
+					</p>
+					
+			<a name="ref"></a>
 			<h2>References</h2>
-			
+			<ol>
+				<li><a name="ref1"></a>Хвищук,&nbsp;А.Ю. Современные средства генерирования VHDL описаний аппаратуры при проектировании программируемых схем FPGA / Хвищук&nbsp;А.Ю., Григорьев&nbsp;А.В. // Микроелектроника и информатика &mdash; 2018. 25&ndash;я Всеросийская межвузовская научно&ndash;техническая конференция студентов и аспирантов: тезисы докладов. &mdash; М.:МИЭТ, 2018. &mdash; 316 с.</li>
+				<li><a name="ref2"></a>Automated sports rim design in CAD system [Электронный ресурс] // IEEE Xplore Digital Library. &mdash; Режим доступа: <a href="https://ieeexplore.ieee.org/document/8376856/" target="_blank">https://ieeexplore.ieee.org/document/8376856/</a> &mdash; Загл. с экрана.</li>
+				<li><a name="ref3"></a>A Methodology of Knowledge Management Based on Ontology in Collaborative Design [Электронный ресурс] // IEEE Xplore Digital Library. &mdash; Режим доступа: <a href="https://ieeexplore.ieee.org/document/4739796" target="_blank">https://ieeexplore.ieee.org/document/4739796</a> &mdash; Загл. с экрана.</li>
+				<li><a name="ref4"></a>Базы знаний интеллектуальных систем / Т.А.&nbsp;Гаврилова, В.Ф.&nbsp;Хорошевский &mdash; СПб: Питер, 2000. &mdash; 384 с.</li>
+				<li><a name="ref5"></a>Исследование способов организации построения инструментальной интеллектуальной оболочки для проектирования сложных объектов на базе экспертных методик [Электронный ресурс] // Портал магистров ДонНТУ. &mdash; Режим доступа: <a href="http://masters.donntu.org/2009/fvti/malyavka/diss/index.htm" target="_blank">http://masters.donntu.org/2009/fvti/malyavka/diss/index.htm</a> &mdash; Загл. с экрана.</li>
+				<li><a name="ref6"></a>Процесс проектирования цифровых устройств с использованием ПЛИС [Электронный ресурс] // Электронная Образовательная Система МГТУ им. Н.Э.Баумана &mdash; Режим доступа: <a href="http://e-learning.bmstu.ru/moodle/pluginfile.php/2910/mod_resource/content/3/%D0%AD%D0%92%D0%9C_5.pdf" target="_blank">http://e-learning.bmstu.ru/moodle/pluginfile.php/2910/mod_resource/content/3/%D0%AD%D0%92%D0%9C_5.pdf</a> &mdash; Загл. с экрана.</li>
+				<li><a name="ref7"></a>Wikipedia contributors. (2018, December 26). Xilinx Vivado. In Wikipedia, The Free Encyclopedia. Retrieved 23:09, January 8, 2019, from <a href="https://en.wikipedia.org/w/index.php?title=Xilinx_Vivado&oldid=875403824" target="_blank">https://en.wikipedia.org/w/index.php?title=Xilinx_Vivado&oldid=875403824</a> &mdash; Загл. с экрана.</li>
+				<li><a name="ref8"></a>Wikipedia contributors. (2018, November 22). Intel Quartus Prime. In Wikipedia, The Free Encyclopedia. Retrieved 23:12, January 8, 2019, from <a href="https://en.wikipedia.org/w/index.php?title=Intel_Quartus_Prime&oldid=870064844" target="_blank">https://en.wikipedia.org/w/index.php?title=Intel_Quartus_Prime&oldid=870064844</a> &mdash; Загл. с экрана.</li>
+				<li><a name="ref13"></a>CLIPS [Электронный ресурс] : Материал из Википедии &mdash; свободной энциклопедии : Версия 95978215, сохранённая в 12:57 UTC 29 октября 2018 / Авторы Википедии // Википедия, свободная энциклопедия. &mdash; Электрон. дан. &mdash; Сан-Франциско: Фонд Викимедиа, 2018. &mdash; Режим доступа: <a href="https://ru.wikipedia.org/?oldid=95978215" target="_blank">https://ru.wikipedia.org/?oldid=95978215</a> &mdash; Загл. с экрана.</li>
+				<li><a name="ref9"></a>Григорьев&nbsp;А.В. Методы поиска новых решений в специализированной инструментальной оболочке для создания интеллектуальных САПР // Десятая национальная конференция по искусственному интеллекту с международным участием КИИ&ndash;2006 (25&ndash;28 сентября 2006г., Обнинск): Труды конференции. &mdash; №. 3. &mdash; С. 1031&ndash;1046.</li>
+				<li><a name="ref10"></a>Григорьев&nbsp;А.В. Теоретико&ndash;множественные операции над грамматиками как инструментарий для построения интеллектуальных САПР // XIII национальная конференция по искусственному интеллекту с международным участием КИИ&ndash;2012 (16&ndash;20 октября 2012 г., Белгород, Россия): Труды конференции. В 4&ndash;т., Белгород: Изд&ndash;во БГТУ, 2012, Т.3, с.202&ndash;209</li>
+				<li><a name="ref11"></a>Григорьев&nbsp;А.В., Каспаров&nbsp;А.А. И/ИЛИ-ДЕРЕВО КАК СРЕДСТВО АБСТРАКТНОГО ПРЕДСТАВЛЕНИЯ БАЗЫ ЗНАНИЙ. &mdash; 2002.</li>
+				<li><a name="ref12"></a>Григорьев&nbsp;А.В. Пути создания интеллектуальных САПР при различных уровнях квалификации экспертов //Донецк: ИПИИ МОН и НАН Украины <q>Наука и образование</q>. &mdash; 2005. &mdash; С. 758&ndash;763.</li>
+			</ol>
 		
 		</div> <!--  maintext -->
 	
@@ -212,6 +250,6 @@
 	<div id="menub">
 		<a class="mitemb" href="../indexe.htm">Resume</a>
 	</div>
-
+</div>
 </body>
 </html>
