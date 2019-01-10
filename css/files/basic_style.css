@@ -180,9 +180,12 @@ a:visited { /* Посещенная ссылка */
 #headertext { /* Блок шапки (только текст) */
   padding: 10pt 10pt 10pt 10pt;
 }
-
+img {
+	max-width: 1000px;
+}
 .img { /* Блок с рисунком */
-  margin: 15pt 0 30pt 0;
+	max-width: 80%;
+  margin: 15pt auto 30pt auto;
   text-align: center;
 }
 
